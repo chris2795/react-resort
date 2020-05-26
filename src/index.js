@@ -1,12 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+// import './index.css';
+
+//import Router
+import {BrowserRouter as Router} from 'react-router-dom'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-
+import {RoomProvider} from './context';
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* type router */}
+    <RoomProvider>
+      <Router>
+        <App/>
+      </Router>
+    </RoomProvider>
+ 
+ 
   </React.StrictMode>,
   document.getElementById('root')
 );
@@ -15,3 +25,4 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+nnnnnnnnn
